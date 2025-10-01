@@ -191,6 +191,8 @@
 
 
 
+
+
 //Advanced functions//
     1.setTimeout()
 
@@ -274,6 +276,29 @@
 
 
 
+//HTML Data attribute//
+It's just another html attribute.
+The purpose of a data attribute is that it allows us to attach any information to an HTML element.
+
+Syntax rules:
+A data attribute is just an HTML attribute. That means it follows the same syntax rules.
+
+name = value
+eg.
+data-product-name = "${product.name}"
+
+NB: 1.The one difference is that data attributes has to start with "data-".
+    2. Also make sure to separate the words with a dash ( - ). Also known as kebab case.
+
+
+.dataset = It gives us all the data attributes attached to an element.
+It basically becomes an object.
+
+So calling it will be like: (.dataset.productSize.)
+NB: Calling the stored dataset in called using camelCase not kebab-case.
+
+
+
 
 
     //Javascript code//
@@ -310,6 +335,7 @@
     29. forEach() method                     ( It's another way to loop through an array.)
     30.  .addEventListener()                 (It let's us run some code when we interact with the element.)
     31.  .removeEventListener()              (It lets us remove an eventListener from an element)
+    32.  .dataset                            (It gives us all the data attributes attached to an element)
 
     //Event listeners//
     1. onclick=" "                  (It runs a Javascript when we click an element).
