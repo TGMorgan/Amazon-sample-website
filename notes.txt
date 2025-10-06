@@ -12,6 +12,11 @@
 
     3. Make the website interactive
 
+    //Organising code in JavaScript//
+
+    1. Group code that job in a function.
+    2. Group related code together into it's own file.
+
 
     //logical operators//
 
@@ -322,13 +327,21 @@ To create a module,
 1. It helps us avoid naming conflicts.
 
 
-
 //Syntax//
-add type = "module" to main javascript file
+1. add type = "module" to main javascript file
 
-export(Your code)
+2. export(Your code)
 
-import {variable} from '[file path]';
+3. import {variable, variable, variable} from '[file path]';
+
+
+NB: "import" has another syntax [import * as (variableName)] from '';
+This imports everything from  a file and groups it together inside of this object.
+And then we can access each import as a property or a method
+Eg.
+1. variableName.cart
+2. variableName.addToCart()
+
 
 
 
