@@ -382,6 +382,7 @@ Eg.
     30.  .addEventListener()                 (It let's us run some code when we interact with the element.)
     31.  .removeEventListener()              (It lets us remove an eventListener from an element)
     32.  .dataset                            (It gives us all the data attributes attached to an element)
+    33.  .remove()                           (DOM has a method called .remove() which removes that element from the page)
 
     //Event listeners//
     1. onclick=" "                  (It runs a Javascript when we click an element).
