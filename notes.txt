@@ -17,6 +17,14 @@
     1. Group code that job in a function.
     2. Group related code together into it's own file.
 
+    //Best Practice//
+
+    When we need to do something complicated,
+    - Try to find an external library first.
+    - Before writing the code ourselves.
+
+    You can find external libraries by searching in google or searching in AI.
+
 
     //logical operators//
 
@@ -347,6 +355,71 @@ Eg.
 
 
 
+
+//EXTERNAL LIBRARY//
+
+The act of compressing code in external library is called Minification
+
+We compress code because you have to load that code from the internet into our project.
+By compressing it, it makes the code smaller so it will load into our project faster.
+
+//Syntax://
+Just add the URL of the code you want to use in the "src" attribute in the script tag.
+
+
+//dayjs LIBRARY//
+
+.add() method.
+
+It let's you add a certain amount of days to today's dataset
+
+It takes two parameters. The first is the number of time you want to add.
+Eg. So if you want to add 7 days, we are gonna type '7'.
+
+The second parameter is the length of time we want to add/
+Eg. So if we want add 7 days, we are gonna give the string 'days'.
+
+
+.format() method
+
+It's used to display the date in an easy to read format like (Tuesday, June 21)
+
+It's takes in  string as a parameter (.format('...')).
+This string tells dayjs what kind of format we want.
+
+MMMM - The full month name (January - December).
+MMM - The abbreviated month name (Jan-Dec)
+D- The day of the month (1 - 31)
+MM - the month, 2 digits (01 - 12)
+M - The month, beginning at 1 (1 - 12)
+dd - the minimum day of the week
+ddd- The short name of the day of the week (Sun-Sat)
+dddd-  The name of the day of the week (Sunday - Saturday)
+H - The hour(0-23)
+
+
+//External Libraries + JavaScript Modules.//
+
+In order to use external libraries and JavaScript modules together, we need to use a special version
+of a library called "ESM Version"
+
+ESM = EcmaScript modules.
+
+
+//Default export//
+
+export default [name of function, variable, e.tc]
+Now when we import this, we can just import the name without the curly brackets.
+
+NB: Each file can only have one default export. So if you want to export one thing from a file, this is another
+    syntax we can use.
+
+
+
+
+
+
+
     //Javascript code//
 
     1. Math.random()                         (It generates a random number between 0 and 1)
@@ -383,6 +456,8 @@ Eg.
     31.  .removeEventListener()              (It lets us remove an eventListener from an element)
     32.  .dataset                            (It gives us all the data attributes attached to an element)
     33.  .remove()                           (DOM has a method called .remove() which removes that element from the page)
+    34. .add()                               (It let's you add a certain amount of days to today's dataset)
+    35. .format()                            (It's used to display the date in an easy to read format like (Tuesday, June 21))
 
     //Event listeners//
     1. onclick=" "                  (It runs a Javascript when we click an element).
