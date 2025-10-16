@@ -1,13 +1,11 @@
-import {cart, removeFromCart, calculateCartQuantity, updateQuantity} from '../data/cart.js';
+import {cart, removeFromCart, calculateCartQuantity, updateQuantity , updateDeliveryOption} from '../data/cart.js';
 import {products} from '../data/products.js';
 import {formatCurrency} from './utils/money.js';
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
-import { deliveryOptions } from '../data/deliveryOptions.js';
+import {deliveryOptions} from '../data/deliveryOptions.js';
 
 let today = dayjs();
-
 let deliveryDate = today.add(7, 'days');
-
 deliveryDate.format('dddd, MMMM D');
 
 displayQuantityOnHeader();
@@ -23,7 +21,6 @@ cart.forEach((cartItem)=>{
         }
     });
 
-
     let deliveryOptionId = cartItem.deliveryOptionId;
 
     let deliveryOption;
@@ -36,7 +33,6 @@ cart.forEach((cartItem)=>{
     let today = dayjs();
     let deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
     let dateString = deliveryDate.format('dddd, MMMM D');
-
 
     let html = `
         <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
@@ -108,7 +104,7 @@ function deliveryOptionsHTML(matchingProduct, cartItem){
     let html = `
       <div class="delivery-option">
         <input type="radio" ${isChecked ? 'checked' : ''}
-          class="delivery-option-input"
+          class="delivery-option-input js-delivery-option" data-product-id = "${matchingProduct.id}" data-delivery-option-id = "${deliveryOption.id}"
           name="delivery-option-${matchingProduct.id}">
         <div>
           <div class="delivery-option-date">
@@ -191,6 +187,20 @@ document.querySelectorAll('.js-quantity-input').forEach((quantityInput)=>{
     if(event.key === "Enter"){
       saveQuantity(productId);
     }
+  });
+});
+
+document.querySelectorAll('.js-delivery-option').forEach((element)=>{
+  element.addEventListener('click', ()=>{
+
+    /* let productId = element.dataset.productId;
+    let deliveryOptionId = element.dataset.deliveryOptionId;
+
+    OR
+    */
+    let {productId, deliveryOptionId} = element.dataset;
+
+    updateDeliveryOption(productId, deliveryOptionId);
   });
 });
 

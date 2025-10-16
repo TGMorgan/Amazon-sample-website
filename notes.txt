@@ -144,6 +144,14 @@
     This is how you get the string out of local Storage:
     localStorage.getItem('message');
 
+    This is how you delete a cart in LocalStorage
+    localStorage.removeItem('cart)
+    NB: You can type that in the console as shortcut to delete the cart from local Storage.
+
+    NNBBB:
+    Also, use localStorage.clear() to remove any bad data saved in localStorage
+    Use this when you have an error in your project but your code looks correct
+
 
 
 
@@ -367,7 +375,7 @@ By compressing it, it makes the code smaller so it will load into our project fa
 Just add the URL of the code you want to use in the "src" attribute in the script tag.
 
 
-//dayjs LIBRARY//
+//dayjs LIBRARY//  https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js
 
 .add() method.
 
