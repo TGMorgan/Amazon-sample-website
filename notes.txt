@@ -466,6 +466,7 @@ NB: Each file can only have one default export. So if you want to export one thi
     33.  .remove()                           (DOM has a method called .remove() which removes that element from the page)
     34. .add()                               (It let's you add a certain amount of days to today's dataset)
     35. .format()                            (It's used to display the date in an easy to read format like (Tuesday, June 21))
+    36. .classList.toggle()                     (It adds the class if it doesn't exist, and removes it if it already exists)
 
     //Event listeners//
     1. onclick=" "                  (It runs a Javascript when we click an element).
