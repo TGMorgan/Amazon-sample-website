@@ -78,9 +78,11 @@
     A function let's reuse code.
     It also make our code easier to update in the future.
 
-    Syntax for functions =  function then //function name//(){} 
+    Syntax for functions =  function then //function name//(){}
 
     To use function = //function name//();
+
+    NB: A function can re-run itself. This feature is called recursion
 
 
 
@@ -424,6 +426,14 @@ NB: Each file can only have one default export. So if you want to export one thi
 
 
 
+
+The technique used to update the data and then regenerate all the HTML is MVC(Model-View-Controller)
+This is a popular technique in software engineering.
+In MVC, we split our code into three parts.
+
+1. Model: This is all the code that saves and manages the data.
+2. View: This is code that takes the data and displays it in the page.
+3. Controller: It runs some code when we interact with the page.
 
 
 
