@@ -5,6 +5,9 @@ import { displayQuantityOnHeader } from './checkout/orderSummary.js';
 
 
 
+
+displayQuantityOnHeader();
+
 let productsHTML = '';
 
 products.forEach((product, index) =>{
