@@ -1,9 +1,9 @@
 import {cart, removeFromCart, calculateCartQuantity, updateQuantity , updateDeliveryOption} from '../../data/cart.js';
 import {products, getProduct} from '../../data/products.js';
 import {formatCurrency} from '../utils/money.js';
-import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
-import {deliveryOptions, getDeliveryOption} from '../../data/deliveryOptions.js';
+import {deliveryOptions, getDeliveryOption, calculateDeliveryDate} from '../../data/deliveryOptions.js';
 import { renderPaymentSummary } from './paymentSummary.js';
+import { renderCheckoutHeader } from './checkoutHeader.js';
 
 
 
@@ -20,8 +20,7 @@ export function renderOrderSummary(){
       let deliveryOptionId = cartItem.deliveryOptionId;
       let deliveryOption = getDeliveryOption(deliveryOptionId);
 
-      let today = dayjs();
-      let deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
+      let deliveryDate  = calculateDeliveryDate(deliveryOption);
       let dateString = deliveryDate.format('dddd, MMMM D');
 
       let html = `
@@ -74,8 +73,7 @@ export function renderOrderSummary(){
   function deliveryOptionsHTML(matchingProduct, cartItem){
     let deliveryOptHTML= '';
     deliveryOptions.forEach((deliveryOption)=>{
-      let today = dayjs();
-      let deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
+      let deliveryDate  = calculateDeliveryDate(deliveryOption);
       let dateString = deliveryDate.format('dddd, MMMM D');
 
       let priceString;
@@ -120,11 +118,13 @@ export function renderOrderSummary(){
 
       removeFromCart(productId);
 
-      let container = document.querySelector(`.js-cart-item-container-${productId}`);
-      container.remove();
+      renderCheckoutHeader();
+
+      /* let container = document.querySelector(`.js-cart-item-container-${productId}`);
+      container.remove(); */
+      renderOrderSummary();
 
       renderPaymentSummary();
-      displayQuantityOnHeader();
     });
   });
 
@@ -195,5 +195,7 @@ export function renderOrderSummary(){
 
 export function displayQuantityOnHeader(){
   let cartQuantity = calculateCartQuantity();
-  document.querySelector('.js-cart-quantity').innerHTML= cartQuantity;
+  document.querySelectorAll('.js-cart-quantity').forEach((quantityVariable)=>{
+    quantityVariable.innerHTML= cartQuantity;
+  });
 }

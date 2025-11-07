@@ -395,7 +395,15 @@ Eg. So if we want add 7 days, we are gonna give the string 'days'.
 It's used to display the date in an easy to read format like (Tuesday, June 21)
 
 It's takes in  string as a parameter (.format('...')).
+
 This string tells dayjs what kind of format we want.
+
+
+.day() method
+
+It returns the day of the week(0 = Sunday - 6 = Saturday)
+
+
 
 MMMM - The full month name (January - December).
 MMM - The abbreviated month name (Jan-Dec)
@@ -427,6 +435,10 @@ NB: Each file can only have one default export. So if you want to export one thi
 
 
 
+
+MVC(Model View Controller)
+
+
 The technique used to update the data and then regenerate all the HTML is MVC(Model-View-Controller)
 This is a popular technique in software engineering.
 In MVC, we split our code into three parts.
@@ -434,6 +446,16 @@ In MVC, we split our code into three parts.
 1. Model: This is all the code that saves and manages the data.
 2. View: This is code that takes the data and displays it in the page.
 3. Controller: It runs some code when we interact with the page.
+
+
+
+
+
+
+
+Testing
+
+A group of tests is called a test-suite.
 
 
 
@@ -476,7 +498,8 @@ In MVC, we split our code into three parts.
     33.  .remove()                           (DOM has a method called .remove() which removes that element from the page)
     34. .add()                               (It let's you add a certain amount of days to today's dataset)
     35. .format()                            (It's used to display the date in an easy to read format like (Tuesday, June 21))
-    36. .classList.toggle()                     (It adds the class if it doesn't exist, and removes it if it already exists)
+    36. .day()                               (It returns the day of the week(0 = Sunday - 6 = Saturday) when used on dayjs())
+    36. .classList.toggle()                  (It adds the class if it doesn't exist, and removes it if it already exists)
 
     //Event listeners//
     1. onclick=" "                  (It runs a Javascript when we click an element).
