@@ -436,7 +436,7 @@ NB: Each file can only have one default export. So if you want to export one thi
 
 
 
-MVC(Model View Controller)
+//MVC(Model View Controller)//
 
 
 The technique used to update the data and then regenerate all the HTML is MVC(Model-View-Controller)
@@ -451,11 +451,45 @@ In MVC, we split our code into three parts.
 
 
 
-
-
-Testing
-
+//Testing//
 A group of tests is called a test-suite.
+
+A name for a situation we are testing is called: (Test Case/Test cases)
+NB: When creating test cases, be sure to create basic test cases, and edge cases if there are any.
+
+NB:  A naming convention used to name for test cases is to describe what the code is doing.
+     For eg. "The code works with zero". And then we remove "the code".
+
+
+
+A group of related tests is called a (Test suite).
+
+Testing Framework:
+A testing framework is an external library that helps us run tests easily.
+
+Some testing frameworks:
+1. Jasmine
+2. Jest(for React.js)
+3. MochaJS
+
+In Jasmine, to create a tests suite, we're going to use a function called: describe()
+
+  describe() takes in two parameters. The first is the string of the name of the test suite, and the second is an arrow
+  function.
+
+  Then inside the arrow function, there is a new function called: it()
+
+  it() function contains two paramters too. The first is the string of the name of the test, and the second is also
+  arrow function
+
+  in the arrow function, there is also another function called: expect(), that allows us to create an if statement and
+  display the results.
+
+  expect() let's us compare a value to another value. The function also give sus an object, which has many methods we can
+  use to do comparisons.
+
+  One is: expect({value}).toEqual('{value to compare to}')
+
 
 
 
