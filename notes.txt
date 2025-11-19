@@ -474,21 +474,73 @@ Some testing frameworks:
 
 In Jasmine, to create a tests suite, we're going to use a function called: describe()
 
+
+
   describe() takes in two parameters. The first is the string of the name of the test suite, and the second is an arrow
-  function.
+  function. ie. describe('test-suite: renderOrderSummary', ()=>{})
 
   Then inside the arrow function, there is a new function called: it()
 
-  it() function contains two paramters too. The first is the string of the name of the test, and the second is also
-  arrow function
+
+
+  it() function contains two parameters too. The first is the string of the name of the test, and the second is also
+  arrow function. ie. it('displays the cart', ()={})
 
   in the arrow function, there is also another function called: expect(), that allows us to create an if statement and
   display the results.
 
+
+
+  //expect()//
+
   expect() let's us compare a value to another value. The function also give sus an object, which has many methods we can
   use to do comparisons.
+  One is: expect({value}).toEqual('{value to compare to}') which checks whether a value is equal to the value in the method
 
-  One is: expect({value}).toEqual('{value to compare to}')
+  Another is .toContain() method that checks if a value contains a string in the method
+  Another is .not property that checks the opposite of whatever is next.
+  For eg, if value.not.toEqual(null), it checks if a value is not equal to null;
+
+
+  //spyOn()//
+
+  spyOn() is used to create a Mock(fake version) of a method. It's takes two parameters:
+  spy([object], '[method]').
+  spyOn() gives us an object, and this object has a property we can use:
+
+  spyOn().and.callFake(): it takes in an arrow function.
+
+
+  //Hooks//
+
+  A hook let's us run some code for each test.
+  Syntax:
+
+  beforeEach((=>{
+    //code//
+  }))
+  This is the beforeEach hook. And it runs that function before each of our tests.
+  it's written inside the describe function.
+
+  Another hook is afterEach(()=>{
+    //code//
+  })
+  This let's us run a function after each test. This is really good for cleanup code.
+
+
+
+
+
+
+Integrated tests:
+
+1. When we're testing a page, the two things we need to test is
+    . How the page looks.
+    . And how the page behaves.
+
+2.
+
+
 
 
 
