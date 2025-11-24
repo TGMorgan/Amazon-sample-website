@@ -87,7 +87,10 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((addToCartButton)=>{
 
     let productId = addToCartButton.dataset.productId;
 
-    addToCart(productId);
+    let selectorElement = document.querySelector(`.js-cart-quantity-selector-${productId}`);
+    let quantity = Number(selectorElement.value);
+
+    addToCart(productId, quantity);
 
     displayQuantityOnHeader();
 

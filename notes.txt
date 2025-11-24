@@ -497,9 +497,10 @@ In Jasmine, to create a tests suite, we're going to use a function called: descr
   use to do comparisons.
   One is: expect({value}).toEqual('{value to compare to}') which checks whether a value is equal to the value in the method
 
-  Another is .toContain() method that checks if a value contains a string in the method
-  Another is .not property that checks the opposite of whatever is next.
+  Another is (.toContain()) method that checks if a value contains a string in the method
+  Another is (.not)  property that checks the opposite of whatever is next.
   For eg, if value.not.toEqual(null), it checks if a value is not equal to null;
+  Another is (.toHAveBeenCalledWith('cart', '[]') ), which checks what values a mocked method received.
 
 
   //spyOn()//
@@ -531,14 +532,25 @@ In Jasmine, to create a tests suite, we're going to use a function called: descr
 
 
 
-
 Integrated tests:
 
 1. When we're testing a page, the two things we need to test is
     . How the page looks.
     . And how the page behaves.
 
-2.
+
+
+
+//Object Oriented Programming//
+
+In procedural programming, we organize our code into separate functions like we did in cart.js.
+But in Object-Oriented Programming, we organize all of the code into an object.
+
+//Why we use object oriented programming//
+1. It tries to represent the real world.
+2. It's easy to create multiple objects.
+
+In object-oriented programming, a number convention is to use PAscalCase for anything that generate objects.
 
 
 
