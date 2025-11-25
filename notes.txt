@@ -541,6 +541,9 @@ Integrated tests:
 
 
 
+
+
+
 //Object Oriented Programming//
 
 In procedural programming, we organize our code into separate functions like we did in cart.js.
@@ -553,6 +556,41 @@ But in Object-Oriented Programming, we organize all of the code into an object.
 In object-oriented programming, a number convention is to use PAscalCase for anything that generate objects.
 
 
+
+
+
+
+
+
+//Class//
+
+A class is basically an object generator.
+It makes it easier to create objects.
+Inside a class, we are gonna put the properties and methods we want for each object that we generate.
+
+When calling a class, for rg. class mobile(), it's called bu using   "new mobile()".
+
+Each object that we generate from a class is called an Instance of class.
+
+[object] instanceof [className]      (It checks if an object is an instance of a class).
+
+
+Benefits of classes
+1. A class looks like the object that we generate.
+
+2. They have extra features for object oriented programming.
+
+    * Constructor
+      This let's us run some setup code after creating an object.
+      When we generate an object(instance of a class), it will run the constructor automatically.
+
+      Constructors can also have parameters.
+
+      A value is saved into the parameter by placing the value into the part of your code where you created the instance of the class.
+      Eg. let cart = new Cart([place value here to assign value to constructor parameter])
+
+      NB: * The method must be named "constructor". You cannot use any name that you want.
+          * Do not return anything from a constructor.
 
 
 
@@ -598,6 +636,7 @@ In object-oriented programming, a number convention is to use PAscalCase for any
     35. .format()                            (It's used to display the date in an easy to read format like (Tuesday, June 21))
     36. .day()                               (It returns the day of the week(0 = Sunday - 6 = Saturday) when used on dayjs())
     36. .classList.toggle()                  (It adds the class if it doesn't exist, and removes it if it already exists)
+    37. [object] instanceof [className]      (It checks if an object is an instance of a class).
 
     //Event listeners//
     1. onclick=" "                  (It runs a Javascript when we click an element).
