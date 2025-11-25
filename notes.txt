@@ -592,6 +592,19 @@ Benefits of classes
       NB: * The method must be named "constructor". You cannot use any name that you want.
           * Do not return anything from a constructor.
 
+    * Private properties and method
+      Private - This means a property can only be accessed inside the class.
+      This is applied by the properties by adding the character '#' in-front of the property in the class.
+      And also when ever that property is accessed inside the class, '#' is added in-front.
+
+      It prevents us from accessing a property outside the object generated from a class and messing it up.
+
+      Public- They are properties without a '#' in-front, meaning it can be accessed everywhere.
+
+      NB: field is the same as a property.
+
+      //Private methods//
+      To make a method private, we do the same thing. A '#' is placed in-front of the method.
 
 
 
