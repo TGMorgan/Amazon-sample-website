@@ -546,6 +546,8 @@ Integrated tests:
 
 //Object Oriented Programming//
 
+Object oriented programming means organizing our code into objects because it tries to represents the real word
+
 In procedural programming, we organize our code into separate functions like we did in cart.js.
 But in Object-Oriented Programming, we organize all of the code into an object.
 
@@ -554,7 +556,6 @@ But in Object-Oriented Programming, we organize all of the code into an object.
 2. It's easy to create multiple objects.
 
 In object-oriented programming, a number convention is to use PAscalCase for anything that generate objects.
-
 
 
 
@@ -574,13 +575,15 @@ Each object that we generate from a class is called an Instance of class.
 
 [object] instanceof [className]      (It checks if an object is an instance of a class).
 
+NB: Object oriented programming means organizing our code into objects because it tries to represents the real word
+And a class is a feature that helps us to generate these objects.
 
 Benefits of classes
 1. A class looks like the object that we generate.
 
 2. They have extra features for object oriented programming.
 
-    * Constructor
+    * Constructor method
       This let's us run some setup code after creating an object.
       When we generate an object(instance of a class), it will run the constructor automatically.
 

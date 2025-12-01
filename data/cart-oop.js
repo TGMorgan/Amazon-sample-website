@@ -91,7 +91,7 @@ function Cart(localStorageKey){
               });
 
               matchingItem.deliveryOptionId = deliveryOptionId;
-
+ 
               this.saveToStorage();
       }
   };
