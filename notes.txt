@@ -609,6 +609,20 @@ Benefits of classes
       //Private methods//
       To make a method private, we do the same thing. A '#' is placed in-front of the method.
 
+    * Inheritance
+      It let's us reuse code between classes.
+      This allows one class to get all the properties ans methods from another class so we don't have to copy paste code
+
+      Syntax: let Clothing extends [class we would want to inherit from]{};
+      After the class name while declaring a new object, you type the word 'extends' and then add the class you want to inherit from.
+
+      In order to call the Parent class' constructor, we use a special feature called super();
+      super() =  It basically calls the constructor of a parent class
+
+      NB: IF you don't create a constructor in the child class, by default it will use the parent's constructor.
+
+      Polymorphism is the use of a method without knowing the class.
+
 
 
 
@@ -653,6 +667,7 @@ Benefits of classes
     36. .day()                               (It returns the day of the week(0 = Sunday - 6 = Saturday) when used on dayjs())
     36. .classList.toggle()                  (It adds the class if it doesn't exist, and removes it if it already exists)
     37. [object] instanceof [className]      (It checks if an object is an instance of a class).
+    38.  super()                             (It basically calls the constructor of a parent class)
 
     //Event listeners//
     1. onclick=" "                  (It runs a Javascript when we click an element).
