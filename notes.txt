@@ -621,7 +621,24 @@ Benefits of classes
 
       NB: IF you don't create a constructor in the child class, by default it will use the parent's constructor.
 
+      Overriding or replacing a parent's method is called method overriding.
+
       Polymorphism is the use of a method without knowing the class.
+
+
+//Built in classes//
+
+1. new Date() class. It generates an object that represent the current date.
+   It let's create objects that represent the current date and time.
+
+   Every date object has a method called [toLocalTimeString()],
+   That basically gives us the current time.
+
+NB: More details about "this".
+
+    * Inside a method, "this" points to th outer object.
+    * Inside a function, "this" is undefined, but we can change it to whatever we want using .call()
+    * Arrow functions do not change the value of "this".
 
 
 

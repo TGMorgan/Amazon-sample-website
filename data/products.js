@@ -57,6 +57,36 @@ class Clothing extends Product{
 
 //Inheritance end//
 
+/* let date = new Date();
+console.log(date);
+
+console.log(date.toLocaleTimeString());
+ */
+
+/* console.log(this);
+
+let Object2 = {
+  a: 2,
+  b: this.a
+}
+ */
+
+/* function logThis(){
+  console.log(this);
+}
+
+logThis();
+logThis.call('hello');
+
+this
+let object3 = {
+  method: ()=>{
+    console.log(this);
+  }
+}
+object3.method();
+ */
+
 
 export let products = [
   {
