@@ -569,13 +569,13 @@ A class is basically an object generator.
 It makes it easier to create objects.
 Inside a class, we are gonna put the properties and methods we want for each object that we generate.
 
-When calling a class, for rg. class mobile(), it's called bu using   "new mobile()".
+When calling a class, for rg. class Mobile(), it's called by using   "new Mobile()".
 
 Each object that we generate from a class is called an Instance of class.
 
 [object] instanceof [className]      (It checks if an object is an instance of a class).
 
-NB: Object oriented programming means organizing our code into objects because it tries to represents the real word
+NB: Object oriented programming means organizing our code into objects because it tries to represents the real world
 And a class is a feature that helps us to generate these objects.
 
 Benefits of classes
@@ -611,7 +611,7 @@ Benefits of classes
 
     * Inheritance
       It let's us reuse code between classes.
-      This allows one class to get all the properties ans methods from another class so we don't have to copy paste code
+      This allows one class to get all the properties and methods from another class so we don't have to copy paste code
 
       Syntax: let Clothing extends [class we would want to inherit from]{};
       After the class name while declaring a new object, you type the word 'extends' and then add the class you want to inherit from.
@@ -639,6 +639,54 @@ NB: More details about "this".
     * Inside a method, "this" points to th outer object.
     * Inside a function, "this" is undefined, but we can change it to whatever we want using .call()
     * Arrow functions do not change the value of "this".
+
+
+
+
+//Backend, callbacks, promises and async waits//
+
+A backend is another computer that manages the data of our website.
+
+Information is sent to the back end by using a feature called HTTP(Hypertext transfer protocol).
+
+To send an HTTP message, we use a class called   XMLHttpRequest.
+After that, you create an instance with the class.
+A message is also known as a request.
+
+Common requests we can give to the backend
+1. GET
+2. POST
+3. PUT
+4. DELETE
+
+Now to set it up, we will do xhr.open('GET', 'https://supersimplebackend.dev).
+Now it has two parameters.
+1. Type of the message you want to send.
+2. And the url(where to send this message to)
+
+To send the message to the backend, we use xhr.send();
+
+When we send a message to the backend, it's called a request.
+When the backend receives our request, it will send an HTTP message back to us.
+And this message is called the response.
+
+NB: xhr.send() is known as an asynchronous code, meaning that it does not wait for this line of code to finish.
+    It just sends the requests and immediately goes to the next line.
+
+The error message tells us the type of request we sent, the URL we sent it to and the Status code
+
+//Status code//
+A status code that starts with 4 or 5 means that a response failed.
+Starting with 4 means that it was our problem. we sent the request to a URL path that was not supported.
+Starting with 5 means that it was the backend's problem. For eg. the backend crushed.
+Starting with 2 means the response was successful.
+
+The list of all the URL paths that are supported is called the background API.(application programming Interface).
+
+NB: Using the browser is the same thing as using a GET request.
+And depending on the type of response, the browser can display the response in a more useful way on the page.
+
+
 
 
 
@@ -684,12 +732,24 @@ NB: More details about "this".
     36. .day()                               (It returns the day of the week(0 = Sunday - 6 = Saturday) when used on dayjs())
     36. .classList.toggle()                  (It adds the class if it doesn't exist, and removes it if it already exists)
     37. [object] instanceof [className]      (It checks if an object is an instance of a class).
+    38. window.open("[html file]");          (It's used to open other html files in JavaScript)
     38.  super()                             (It basically calls the constructor of a parent class)
+
+
+
+
+    //Backend Javascript code//
+    1.
+
+
+
 
     //Event listeners//
     1. onclick=" "                  (It runs a Javascript when we click an element).
     2. onkeydown=" "                (It runs a javascript when we press a keydown on our keyboard).
        It get's a special object called 'event'. And it contains which key was pressed. if you want to key the key that was pressed, use 'event.key'
     3. onkeyup=" "                  (It runs code after we press a key and release it(key comes up))
+    4. blur  ()
+    5. focus ()
 
 

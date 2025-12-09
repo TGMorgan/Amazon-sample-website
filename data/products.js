@@ -55,6 +55,13 @@ class Clothing extends Product{
   }
 }
 
+class Appliance{
+  instructionsLink;
+  warrantyLink;
+
+
+}
+
 //Inheritance end//
 
 /* let date = new Date();
