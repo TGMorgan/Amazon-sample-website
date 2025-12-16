@@ -649,7 +649,7 @@ A backend is another computer that manages the data of our website.
 
 Information is sent to the back end by using a feature called HTTP(Hypertext transfer protocol).
 
-To send an HTTP message, we use a class called   XMLHttpRequest.
+To send an HTTP message, we use a class called  XMLHttpRequest.
 After that, you create an instance with the class.
 A message is also known as a request.
 
@@ -659,7 +659,7 @@ Common requests we can give to the backend
 3. PUT
 4. DELETE
 
-Now to set it up, we will do xhr.open('GET', 'https://supersimplebackend.dev).
+Now to set it up, we will do xhr.open('GET', 'https://supersimplebackend.dev').
 Now it has two parameters.
 1. Type of the message you want to send.
 2. And the url(where to send this message to)
