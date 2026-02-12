@@ -339,7 +339,7 @@ To create a module,
 
 //Notes this about modules//
 1. We have to put all of our imports at the top of the file.
-2. We need to use live server.
+2. We need to use live server(opening the html file directly in the file without live server does't work with modules)
 
 //Benefits of modules//
 1. It helps us avoid naming conflicts.
@@ -359,6 +359,10 @@ And then we can access each import as a property or a method
 Eg.
 1. variableName.cart
 2. variableName.addToCart()
+
+You can also change the import name in your file as: import {cart as MyCart} from '....'
+
+
 
 
 
@@ -681,12 +685,43 @@ Starting with 4 means that it was our problem. we sent the request to a URL path
 Starting with 5 means that it was the backend's problem. For eg. the backend crushed.
 Starting with 2 means the response was successful.
 
-The list of all the URL paths that are supported is called the background API.(application programming Interface).
+The list of all the URL paths that are supported is called the BACKEND API.(Application Programming Interface).
 
 NB: Using the browser is the same thing as using a GET request.
 And depending on the type of response, the browser can display the response in a more useful way on the page.
 
+Also, a function you give as an argument to another function for it to run in the future or to call
+back in the future is called "Callback"
 
+
+//Promises//
+
+They are a better way to handle asynchronous code.
+They are kinda similar to Jasmine's done() function.
+It let's us wait for some asynchronous code to finish before going to the next step.
+
+[Promise is a class]
+
+Now the inner function inside the object of the promise class gets a parameter called "resolve".
+"resolve" is a function that works similar to Jasmine's done() function. It  let's us control when to go to
+the next step.
+
+To add a next step to a promise, we use a method called ".then()" at the end of the promise object.
+Then we give .then() a function
+
+Inside .then(), we can actually return a new Promise()
+
+Features of promises
+
+1. We can give resolve a value. Whatever we give to resolve is going to be saved in a a parameter inside ".then()"
+
+2. We can run multiple promises at the same time.
+   For that we use a feature called Promise.all()
+   It let's us run multiple promises at the same time and wait for all of them to finish.
+   Inside, the Promise.all() brackets, we will it an array.
+   Inside that array, we can give it multiple promises to wait for.
+
+Promises are better way to wait for asynchronous code to finish versus callbacks because they help us avoid nesting.
 
 
 

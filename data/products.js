@@ -59,7 +59,6 @@ class Appliance{
   instructionsLink;
   warrantyLink;
 
-
 }
 
 //Inheritance end//
@@ -111,7 +110,7 @@ export function loadProducts(fun){
       return new Product(productDetails);
     });
 
-    console.log('load products');
+    console.log('Products has been loaded');
 
     fun();
   });

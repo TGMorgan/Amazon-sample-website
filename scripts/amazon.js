@@ -4,10 +4,6 @@ import {formatCurrency} from './utils/money.js';
 import { displayQuantityOnHeader } from './checkout/orderSummary.js';
 
 
-
-
-
-
 loadProducts(renderProductsGrid);
 
 function renderProductsGrid(){
