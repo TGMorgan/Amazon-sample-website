@@ -724,6 +724,25 @@ Features of promises
 Promises are better way to wait for asynchronous code to finish versus callbacks because they help us avoid nesting.
 
 
+//Fetch//
+it's a better way to make HTTP requests.
+
+To use fetch, we use an in-built function "fetch()"
+This makes an HTTP request.
+Fetch sends automatically sends a get response, so only the url is needed to be placed inside the brackets.
+And then we get the results by using .then() just like a promise.
+So, instead of using a callback to get the response like in XMLHttpRequest, fetch() uses a promise.
+When we call fetch, it is going to create a promise...
+And then we can add a next step to this promise using .then().
+
+NB: The response is also saved inside the parameter in the arrow function inside .then().
+    So we add a parameter called "response".
+
+To get the data attached to the response, we are gonna use "response.json()
+"response.json()" is actually asynchronous which returns a promise.
+So we need for this promise to finish before we continue to the next step.
+
+
 
 
     //Javascript code//
