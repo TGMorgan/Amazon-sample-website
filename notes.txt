@@ -744,6 +744,33 @@ So we need for this promise to finish before we continue to the next step.
 
 
 
+//Async await//
+This is an even better way to handle asynchronous code.
+
+When "async" is placed first before a function is declared just like "export",
+this allows a function return a promise.
+
+If we return something from an async function like "value2", it gets converted into  resolve('value2').
+And this value is saved in the parameter in the next step.
+
+//What's the point of this feature?//
+Te reason why we use async is because it let's us the second feature called await.
+
+Await let's us wait for a promise to finish before going to the next line
+
+We can only use await when we are inside an async function.(The closest function has to be async)
+That's actually the main reason why we use async, so that we can use await to make our code cleaner.
+
+NB: Async await can only be used with promises. it doesn't do anything with a callback.
+
+* Async await a shortcut for promises.
+*It also let's us write asynchronous code like normal code.
+
+So working with asynchronous code, the best practice is to use async await over promises and callbacks
+because they are much cleaner.
+
+
+
 
     //Javascript code//
 
