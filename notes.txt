@@ -658,10 +658,10 @@ After that, you create an instance with the class.
 A message is also known as a request.
 
 Common requests we can give to the backend
-1. GET
-2. POST
-3. PUT
-4. DELETE
+1. GET =  if you want to get something from the backend.
+2. POST = if you want the backend to create something.
+3. PUT = if you want it to update something.
+4. DELETE = if you want to delete something.
 
 Now to set it up, we will do xhr.open('GET', 'https://supersimplebackend.dev').
 Now it has two parameters.
@@ -825,7 +825,6 @@ because they are much cleaner.
 
     //Backend Javascript code//
     1.
-
 
 
 
