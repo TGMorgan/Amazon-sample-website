@@ -754,7 +754,7 @@ If we return something from an async function like "value2", it gets converted i
 And this value is saved in the parameter in the next step.
 
 //What's the point of this feature?//
-Te reason why we use async is because it let's us the second feature called await.
+The reason why we use async is because it let's us the second feature called await.
 
 Await let's us wait for a promise to finish before going to the next line
 
@@ -769,6 +769,10 @@ NB: Async await can only be used with promises. it doesn't do anything with a ca
 So working with asynchronous code, the best practice is to use async await over promises and callbacks
 because they are much cleaner.
 
+
+
+
+//Error handling//
 
 
 
