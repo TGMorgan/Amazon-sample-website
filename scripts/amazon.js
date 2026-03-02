@@ -1,12 +1,47 @@
 import {addToCart} from '../data/cart.js';
-import {products, loadProducts} from '../data/products.js';
+import {products, loadProductsFetch} from '../data/products.js';
 import {formatCurrency} from './utils/money.js';
 import { displayQuantityOnHeader } from './checkout/orderSummary.js';
 
 
-loadProducts(renderProductsGrid);
 
-function renderProductsGrid(){
+
+
+
+async function loadProductsPage(){
+  await loadProductsFetch();
+
+  let url = new URL(window.location.href);
+
+  if(url.searchParams.has('search')){
+    let searchedWord = url.searchParams.get('search').toLowerCase();
+    console.log(searchedWord);
+
+    let newProducts = products.filter((product)=>{
+
+      if(product.name.toLowerCase().includes(searchedWord)){
+        return true;
+      }
+
+      return product.keywords.some((keyword)=>{
+        if(keyword.toLowerCase().includes(searchedWord)){
+          return true;
+        }
+      });
+
+    });
+
+    console.log(newProducts);
+
+    renderProductsGrid(newProducts);
+  }else{
+    renderProductsGrid(products);
+  }
+}
+
+loadProductsPage();
+
+function renderProductsGrid(products){
   displayQuantityOnHeader();
 
   let productsHTML = '';
@@ -20,7 +55,7 @@ function renderProductsGrid(){
             </div>
 
             <div class="product-name limit-text-to-2-lines">
-              ${product.name};
+              ${product.name}
             </div>
 
             <div class="product-rating-container">
@@ -100,5 +135,18 @@ function renderProductsGrid(){
       displayAddedMessage(productId);
 
     });
+  });
+
+  let searchButton = document.querySelector('.js-search-button');
+  searchButton.addEventListener('click', ()=>{
+    let searchedWord = document.querySelector('.js-search-bar').value;
+
+    if(!searchedWord){
+      alert('Please search for a product');
+      document.querySelector('.js-search-bar').value = '';
+    }
+    else{
+      window.location.href = `../amazon.html?search=${searchedWord}`;
+    }
   });
 }

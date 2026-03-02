@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+
+    <script>
+
+        let xhr = new XMLHttpRequest();
+
+        xhr.addEventListener('load', ()=>{
+            console.log(xhr.response);
+        });
+
+        xhr.addEventListener('error', (error)=>{
+            console.log('An error has happened')
+        })
+
+        xhr.open('GET', 'https://supersimplebackend.dev/greeting');
+        xhr.send();
+
+
+        let promise = fetch('https://supersimplebackend.dev/greeting').then((response)=>{
+            return response.text();
+        }).then((data)=>{
+            console.log(data);
+        });
+
+        async function loadTextFetch(){
+            try{
+                let response = await fetch('https://supersimplebackend.dev/greeting',{
+                method:'GET'
+            });
+
+            let data = await response.text();
+
+            console.log(data);
+            }
+            catch(error){
+                console.log('Unexpected error. Please try again later')
+            }
+        }
+
+
+
+        //Continuing 18.d//
+
+        async function loadNameFetch(){
+            try{
+                let response =  await fetch('https://supersimplebackend.dev/greeting', {
+                method: 'POST',
+                headers:{
+                    'Content-Type': 'application/json'
+                },
+
+                body: JSON.stringify({name: 'TOP G MORGAN'})
+            })
+
+            let responseAcquired = await response.text();
+
+            console.log(responseAcquired);
+            }
+            catch(error){
+                console.log(`This is your error: \n${error}`)
+            }
+        }
+
+
+
+        async function loadAmazonData(){
+            try{
+                let response = await fetch('https://amazon.com');
+
+                let dataNeeded = response.json();
+
+                console.log(dataNeeded);
+            }
+            catch(error){
+                console.log('CORS error: Your request was blocked by the backend')
+            }
+        }
+
+
+        async function loadSuperSimpleData(){
+            try{
+                let response = await fetch('https://supersimplebackend.dev/greeting', {
+                    method:'POST',
+                    headers:{
+                        'Content-Type': 'application/json'
+                    }
+                })
+
+                if(response.status >= 400){
+                    throw response;
+                }
+
+                let dataReceived = await response.json();
+            }
+            catch(error){
+                if(error.status === 400){
+                    console.log(await error.json());
+                }
+                else{
+                    console.log('Network error. Please try again later')
+                }
+            }
+        }
+
+        loadSuperSimpleData();
+
+
+    </script>
+</body>
+</html>

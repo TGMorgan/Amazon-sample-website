@@ -1,6 +1,7 @@
 import {formatCurrency} from '../scripts/utils/money.js'
 
 export function getProduct(productId){
+
   let matchingProduct;
       products.forEach((product)=>{
           if(product.id === productId){
@@ -17,6 +18,7 @@ class Product{
   name;
   rating;
   priceCents;
+  keywords;
 
   constructor(productDetails){
     this.id = productDetails.id;
@@ -24,6 +26,7 @@ class Product{
     this.name = productDetails.name;
     this.rating = productDetails.rating;
     this.priceCents = productDetails.priceCents;
+    this.keywords = productDetails.keywords;
   }
 
   getStarsURL(){
@@ -114,7 +117,7 @@ export function loadProductsFetch(){
     console.log('Products has been loaded');
   }).catch((error)=>{
     console.log('Unexpected Error. Please try again later ');
-  })
+  });
 
   return promise;
 }

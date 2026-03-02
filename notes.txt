@@ -774,6 +774,32 @@ because they are much cleaner.
 
 //Error handling//
 
+Try catch is not only used with asynchronous code. it can also be used to catch errors in normal coe as well.
+
+Syntax: try{
+
+}catch(error){
+
+}
+
+//Why we don't use try catch everywhere//
+It's meant to handle unexpected errors.
+
+'throw' is used to create errors in try/catch.
+We can use any type of values for an error like a string, number or object.
+
+'reject' is function inserted as a parameter in a promise. So when the function is called in the promise,
+the type of error [string, numbers, or objects] is placed in the brackets.
+
+
+//URL parameters//
+Url parameters let's us save data directly in the url.
+To create a url parameter, at the top, after the url, we are gonna type "?orderId=123", then press enter
+
+To get the parameters out of the url, we can use a built in class called "URL()"
+If you wanna add another in the url, at the end...
+Just continue with "&productId=456"
+
 
 
     //Javascript code//
@@ -798,6 +824,7 @@ because they are much cleaner.
     18  .classList.contains()                (It checks if a button has a specific class.)
     19  .length                              (This tells us the number of values are in an array)
     20  .push()                               This adds a value to the end of the array.
+    20.5 .unshift()                          (This pushes a value at the front of the array. opposite of .push())
     21. .splice([index],[number])            (This removes a value from an array)
     22. .slice()                             (This is how you make a copy of an array and store it in a different array)
     23. break                                (Break lets us exit a loop early)
@@ -819,12 +846,16 @@ because they are much cleaner.
     37. [object] instanceof [className]      (It checks if an object is an instance of a class).
     38. window.open("[html file]");          (It's used to open other html files in JavaScript)
     38.  super()                             (It basically calls the constructor of a parent class)
-
-
+    39. window.location.href = '[html file path]' (It is used to open other html files in JavaScript. It also gets the url at the top of the browser)
+    40. .valueOf()                           (For dayjs, It returns the timestamp in milliseconds)
+    41  url.searchParams                     (This is how query parameters are accessed)
+    42. url.searchParams.get('orderId')      (This is how information from url parameters are gotten)
+    43. url.searchParams.has('orderId)       (This is how you check if a url parameter exists)
 
 
     //Backend Javascript code//
-    1.
+    1. try/catch                              (It's used for error handling)
+    2. throw                                  (It's used to manually create errors in try/catch)
 
 
 
