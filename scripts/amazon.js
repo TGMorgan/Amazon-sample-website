@@ -146,7 +146,7 @@ function renderProductsGrid(products){
       document.querySelector('.js-search-bar').value = '';
     }
     else{
-      window.location.href = `../amazon.html?search=${searchedWord}`;
+      window.location.href = `./amazon.html?search=${searchedWord}`;
     }
   });
 }
