@@ -112,7 +112,7 @@ function renderOrderPage(){
             console.log(orderId);
             console.log(productId);
 
-            window.location.href = `./tracking.html?orderId=${orderId}&productId=${productId}`;
+            window.location.href = `/tracking.html?orderId=${orderId}&productId=${productId}`;
         })
     })
 }
