@@ -4,7 +4,7 @@ export function renderCheckoutHeader(){
     let checkoutHeaderHtml = `
     <div class="header-content">
         <div class="checkout-header-left-section">
-          <a href="../../index.html">
+          <a href="./index.html">
             <img class="amazon-logo" src="images/amazon-logo.png">
             <img class="amazon-mobile-logo" src="images/amazon-mobile-logo.png">
           </a>
